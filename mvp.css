@@ -323,6 +323,11 @@ figure figcaption {
     color: var(--color-text-secondary);
 }
 
+img.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto }
+
 /* Forms */
 
 button:disabled,
@@ -338,12 +343,12 @@ button[disabled]:hover {
 }
 
 form {
-    border: 1px solid var(--color-bg-secondary);
+    /* border: 1px solid var(--color-bg-secondary);
     border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow) var(--color-shadow);
+    box-shadow: var(--box-shadow) var(--color-shadow); */
     display: block;
-    max-width: var(--width-card-wide);
-    min-width: var(--width-card);
+    /* max-width: var(--width-card-wide);
+    min-width: var(--width-card); */
     padding: 1.5rem;
     text-align: var(--justify-normal);
 }
