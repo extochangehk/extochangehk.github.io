@@ -457,3 +457,10 @@ blockquote footer {
     line-height: var(--line-height);
     padding: 1.5rem 0;
 }
+
+
+.crop {
+    height: 200px;
+    overflow: hidden;
+    object-fit: cover;
+}
