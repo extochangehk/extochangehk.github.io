@@ -13,6 +13,11 @@
     --color-text: #000;
     --color-text-secondary: #999;
     --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    /* --fontFamily: -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto,"sohne-var","Helvetica Neue","Arial",sans-serif; */
+    --fontWeightLight: 200;
+    --fontWeightNormal: 300;
+    --fontWeightSemibold: 425;
+    --fontWeightBold: 500;
     --hover-brightness: 1.2;
     --justify-important: center;
     --justify-normal: left;
@@ -21,6 +26,8 @@
     --width-card-medium: 460px;
     --width-card-wide: 800px;
     --width-content: 1080px;
+    --buttonColor: #15be53;
+    --knockoutColor: #fff;
 }
 
 /*
@@ -40,6 +47,7 @@
 */
 
 /* Layout */
+
 article aside {
     background: var(--color-secondary-accent);
     border-left: 4px solid var(--color-secondary);
@@ -56,9 +64,7 @@ body {
     padding: 1rem 0;
 }
 
-footer,
-header,
-main {
+footer, header, main {
     margin: 0 auto;
     max-width: var(--width-content);
     padding: 2rem 1rem;
@@ -99,9 +105,8 @@ section aside img {
 }
 
 /* Headers */
-article header,
-div header,
-main header {
+
+article header, div header, main header {
     padding-top: 0;
 }
 
@@ -109,10 +114,7 @@ header {
     text-align: var(--justify-important);
 }
 
-header a b,
-header a em,
-header a i,
-header a strong {
+header a b, header a em, header a i, header a strong {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
 }
@@ -126,7 +128,16 @@ section header {
     width: 100%;
 }
 
+header #logo {
+    float: left;
+    letter-spacing: 3px;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+
 /* Nav */
+
 nav {
     align-items: center;
     display: flex;
@@ -148,6 +159,7 @@ nav ul li {
 }
 
 /* Nav Dropdown */
+
 nav ul li:hover ul {
     display: block;
 }
@@ -178,14 +190,13 @@ nav ul li ul::before {
     height: 0.5rem;
 }
 
-nav ul li ul li,
-nav ul li ul li a {
+nav ul li ul li, nav ul li ul li a {
     display: block;
 }
 
 /* Typography */
-code,
-samp {
+
+code, samp {
     background-color: var(--color-accent);
     border-radius: var(--border-radius);
     color: var(--color-text);
@@ -203,12 +214,7 @@ details summary {
     cursor: pointer;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
     line-height: var(--line-height);
 }
 
@@ -216,8 +222,7 @@ mark {
     padding: 0.1rem;
 }
 
-ol li,
-ul li {
+ol li, ul li {
     padding: 0.2rem 0;
 }
 
@@ -232,8 +237,7 @@ pre {
     padding: 1rem 0;
 }
 
-pre code,
-pre samp {
+pre code, pre samp {
     display: block;
     max-width: var(--width-card-wide);
     padding: 0.5rem 2rem;
@@ -257,6 +261,7 @@ sup {
 }
 
 /* Links */
+
 a {
     color: var(--color-secondary);
     display: inline-block;
@@ -269,12 +274,7 @@ a:hover {
     text-decoration: underline;
 }
 
-a b,
-a em,
-a i,
-a strong,
-.button,
-button {
+a b, a em, a i, a strong, .button, button {
     border-radius: var(--border-radius);
     display: inline-block;
     font-size: medium;
@@ -288,21 +288,34 @@ button {
     font-family: var(--font-family);
 }
 
+.registerButton {
+    display: inline-block;
+    padding: 3px 0 6px;
+    border-radius: 16.5px;
+    font: var(--ctaFont);
+    color: var(--buttonColor);
+    transition: var(--hoverTransition);
+    outline: none;
+    padding-left: 16px;
+    padding-right: 16px;
+    background-color: var(--buttonColor);
+    color: var(--knockoutColor);
+    white-space: nowrap;
+    transition-property: background-color, opacity;
+}
+
 button:hover {
     cursor: pointer;
     filter: brightness(var(--hover-brightness));
 }
 
-a b,
-a strong,
-button {
+a b, a strong, button {
     background-color: var(--color);
     border: 2px solid var(--color);
     color: var(--color-bg);
 }
 
-a em,
-a i {
+a em, a i {
     border: 2px solid var(--color);
     border-radius: var(--border-radius);
     color: var(--color);
@@ -311,6 +324,7 @@ a i {
 }
 
 /* Images */
+
 figure {
     margin: 0;
     padding: 0;
@@ -327,12 +341,12 @@ figure figcaption {
 img.center {
     display: block;
     margin-left: auto;
-    margin-right: auto }
+    margin-right: auto
+}
 
 /* Forms */
 
-button:disabled,
-input:disabled {
+button:disabled, input:disabled {
     background: var(--color-bg-secondary);
     border-color: var(--color-bg-secondary);
     color: var(--color-text-secondary);
@@ -359,39 +373,31 @@ form header {
     padding: 1.5rem 0;
 }
 
-input,
-label,
-select,
-textarea {
+input, label, select, textarea {
     display: block;
     font-size: inherit;
     max-width: var(--width-card-wide);
 }
 
-input[type="checkbox"],
-input[type="radio"] {
+input[type="checkbox"], input[type="radio"] {
     display: inline-block;
 }
 
-input[type="checkbox"]+label,
-input[type="radio"]+label {
+input[type="checkbox"]+label, input[type="radio"]+label {
     display: inline-block;
     font-weight: normal;
     position: relative;
     top: 1px;
 }
 
-input,
-select,
-textarea {
+input, select, textarea {
     border: 1px solid var(--color-bg-secondary);
     border-radius: var(--border-radius);
     margin-bottom: 1rem;
     padding: 0.4rem 0.8rem;
 }
 
-input[readonly],
-textarea[readonly] {
+input[readonly], textarea[readonly] {
     background-color: var(--color-bg-secondary);
 }
 
@@ -405,6 +411,7 @@ input.email {
 }
 
 /* Tables */
+
 table {
     border: 1px solid var(--color-bg-secondary);
     border-radius: var(--border-radius);
@@ -416,9 +423,7 @@ table {
     white-space: nowrap;
 }
 
-table td,
-table th,
-table tr {
+table td, table th, table tr {
     padding: 0.4rem 0.8rem;
     text-align: var(--justify-important);
 }
@@ -440,8 +445,7 @@ table thead th:last-child {
     border-top-right-radius: var(--border-radius);
 }
 
-table thead th:first-child,
-table tr td:first-child {
+table thead th:first-child, table tr td:first-child {
     text-align: var(--justify-normal);
 }
 
@@ -450,6 +454,7 @@ table tr:nth-child(even) {
 }
 
 /* Quotes */
+
 blockquote {
     display: block;
     font-size: x-large;
@@ -468,9 +473,14 @@ blockquote footer {
     padding: 1.5rem 0;
 }
 
-
 .crop {
     height: 200px;
     overflow: hidden;
     object-fit: cover;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
 }
