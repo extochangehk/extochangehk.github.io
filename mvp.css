@@ -273,6 +273,7 @@ a b,
 a em,
 a i,
 a strong,
+.button,
 button {
     border-radius: var(--border-radius);
     display: inline-block;
