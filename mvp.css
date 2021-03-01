@@ -660,3 +660,40 @@ div.social-contacts {
     display: flex;
     align-items: center;
 }
+
+.floating {
+    position: absolute;
+    top: 50px;
+    left: 200px;
+    z-index: 10;
+}
+
+/*
+@see:http://jsfiddle.net/jonathansampson/xxuxd/
+*/
+
+/* Make it a marquee */
+marquee {
+    background-color:white;
+    color: black;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    animation: marquee 50s linear infinite;
+}
+
+marquee:hover {
+    animation-play-state: paused
+}
+
+marquee.bottom {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+/* Make it move */
+@keyframes marquee {
+    0%   { text-indent: 27.5em }
+    100% { text-indent: -105em }
+}
