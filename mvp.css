@@ -697,3 +697,9 @@ marquee.bottom {
     0%   { text-indent: 27.5em }
     100% { text-indent: -105em }
 }
+
+#typed {
+    width: 250px; /* or whatever width you want. */
+    max-width: 250px; /* or whatever width you want. */
+    display: inline-block;
+}
